@@ -6,6 +6,12 @@
 
 記錄自己的每日支出，提高對於金錢的掌握度!
 
+[Heroku App](https://calm-wildwood-13496.herokuapp.com/)
+
+email: root@example.com
+
+password: 12345678
+
 ### 功能
 
 - 首頁查看所有紀錄
@@ -17,43 +23,45 @@
 - 查詢紀錄名稱
 - 按照金額or日期排序
 
+### 帳號
+create an account with your email, Facebook or Google
+
 ## 開始使用
 
-1. 請先確認有安裝 node.js 與 npm
-2. 將專案 clone 到本地
-3. 在本地開啟之後，透過終端機進入資料夾，輸入：
+### Setup MongoDB
+1. Turn on the DB
+```
+[~] $ cd ~/mongodb/bin/
+[~/mongodb/bin] $ ./mongod --dbpath ~/mongodb-data
+```
+2. Create a database named "expense-tracker"
+```
+add expense-tracker
+```
+### Activate Project
+1. Clone this git to local
+```
+[~] $ git clone https://github.com/Johnny77585/expense-tracker.git
+```
 
-   ```bash
-   npm install
-   ```
+2. Get into the directory
+```
+[~] $ cd expense-tracker
+```
 
-4. 安裝完畢後，繼續輸入：
+3. Install packages
+```
+[~/expense-tracker] $ npm install
+```
 
-   ```bash
-   npm run start
-   ```
-
-5. 若看見此行訊息則代表順利運行，打開瀏覽器進入到以下網址
-
-   ```bash
-   Listening on http://localhost:3000
-   ```
-
-6. 若欲暫停使用
-
-   ```bash
-   ctrl + c
-   ```
-
+4. Run the project
+```
+[~/expense-tracker] $ npm run seed
+[~/expense-tracker] $ npm run start
+```
 ## 開發工具
 
 - Node.js 
 - Express
-- Express-Handlebars
-- Bootstrap 
-- Font-awesome
 - MongoDB
 - mongoose 
-- handlebars-helpers 
-- passport
-- bcrypt
